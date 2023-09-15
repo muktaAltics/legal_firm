@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='update_case.css') }}">
+    <title>Update Case Record</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Legal Firm Case Update</h1>
+    </header>
+
+    <div class="container">
+        {% for adv in advocate %}
+            <form action="/update_adv" method="POST" class="case-form">
+            <h2>Update Advocate Info</h2>
+            <div class="form-group">
+                <label for="advId">Advocate ID:</label>
+                <input type="text" id="word" name="word" value="{{adv[0]}}" readonly>
+                <!-- <input type="text" id="advId" name="advId" required> -->
+            </div>
+            <div class="form-group">
+                <label for="name">New Advocate Name:</label>
+                <input type="text" id="name" name="name" value="{{adv[1]}}" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">New Advocate Contact NO.:</label>
+                <input type="text" id="contact" name="contact" value="{{adv[2]}}" required>
+            </div>
+            <div class="form-group">
+                <label for="specialization">New Advocate Specialization:</label>
+                <input type="text" id="specialization" name="specialization" value="{{adv[3]}}" required>
+            </div>
+            <div class="form-group">
+                <label for="email">New Advocate Email ID:</label>
+                <input type="text" id="email" name="email" value="{{adv[4]}}" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">update</button>
+            </div>    
+         {% endfor %}
+    <footer class="footer">
+        <p>&copy; 2023 Legal Firm. All rights reserved.</p>
+    </footer>
+</body>
+</html>

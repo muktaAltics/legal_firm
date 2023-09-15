@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='create_case.css') }}">
+    <title>Create Case - Legal Firm</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Create Case</h1>
+    </header>
+
+    <div class="container">
+        <form action="/create_case" method="POST" class="case-form">
+            <div class="form-group">
+                <label for="title">Case Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="Open">Open</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Closed">Closed</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="status">Case Type:</label>
+                <select id="type" name="type">
+                    <option value="Criminal">Criminal</option>
+                    <option value=" Civil">Civil</option>
+                    <option value="Family">Family</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Court">Court Name:</label>
+                <input type="text" id="court" name="court" required>
+            </div>
+            <div class="form-group">
+                <label for="fillingDate">Filing Date:</label>
+                <input type="date" id="filingDate" name="filingDate" required>
+            </div>
+            <div class="form-group">
+                <label for="closingDate">Closing Date:</label>
+                <input type="date" id="closingDate" name="closingDate" required>
+            </div>
+            <div class="form-group">
+                <label for="procedureType">Procedure Type:</label>
+                <input type="text" id="procedureType" name="procedureType" required>
+            </div>
+            <div class="form-group">
+                <label for="procedureDate">Procedure Date:</label>
+                <input type="date" id="procedureDate" name="procedureDate" required>
+            </div>
+            <div class="form-group">
+                <label for="DocName">Document Name:</label>
+                <input type="text" id="DocName" name="DocName" required>
+            </div>
+            <div class="container1">
+                
+                    <div class="form-group">
+                        <label for="file">Select a File:</label>
+                        <input type="file" id="file" name="file" accept=".pdf, .doc, .docx, .txt" required>
+                        <small class="form-text">Supported file formats: PDF, DOC, DOCX, TXT.</small>
+                    </div>
+                
+            </div>
+            <div class="form-group">
+                <label for="DocSubmitDate">Document Submit Date:</label>
+                <input type="date" id="DocSubmitDate" name="DocSubmitDate" required>
+            </div>
+            <div class="form-group">
+                <label for="CourtAppearDate">Court Appearance Date:</label>
+                <input type="date" id="CourtAppearDate" name="CourtAppearDate" required>
+            </div>
+            <div class="form-group">
+                <label for="AdvName">Advocate Name:</label>
+                <input type="text" id="AdvName" name="AdvName" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Create</button>
+                <div id="message" class="hidden">
+                    <p>Case saved successfully.</p>
+                </div>
+
+                <script src="script.js"></script>
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2023 Legal Firm. All rights reserved.</p>
+    </footer>
+</body>
+</html>

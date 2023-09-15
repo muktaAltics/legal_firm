@@ -1,0 +1,20 @@
+Fields for case table:
+Case Id
+Case number
+case title
+case description
+case status(Open, closed, pending, etc)
+case type(criminal, civil, family, etc)
+court info(court name, docket number, judge, etc)
+filing date
+closing date
+procedure type
+procedure date
+document name submitted
+document file 
+document submitted date
+note
+court appearance date
+case assigned to
+billing cost
+payment method

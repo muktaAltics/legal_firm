@@ -1,0 +1,13 @@
+table fields for payments of legal case:
+payment id
+case id
+client id
+payment date
+payment amount
+payment method
+payment description
+no.of installment
+remaining amount
+bill no.
+transaction id
+payment status

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <title>Legal Firm</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to Legal Firm</h1>
+        <p>Your Trusted Legal Advisors</p>
+    </header>
+    <form action="/cases" method="POST">
+    <div class="container">
+        <section class="element case">
+            <h2>Cases</h2>
+            <p>Explore our latest cases and legal services.</p>
+            <a href="{{ url_for('read_cases') }}" class="btn">View Cases</a>
+        </section>
+
+        <section class="element client">
+            <h2>Clients</h2>
+            <p>Meet our valued clients and their success stories.</p>
+            <a href="#" class="btn">Meet Clients</a>
+        </section>
+
+        <section class="element advocate">
+            <h2>Other Advocates</h2>
+            <p>Learn about our experienced legal advocates.</p>
+            <a href="{{ url_for('read_advocates') }}" class="btn">Meet Advocates</a>
+        </section>
+
+        <section class="element bill">
+            <h2>Client Bills</h2>
+            <p>Transparent billing solutions for our clients.</p>
+            <a href="#" class="btn">View Bills</a>
+        </section>
+
+        <section class="element payment">
+            <h2>Client Payments</h2>
+            <p>Explore payment options and history.</p>
+            <a href="#" class="btn">Manage Payments</a>
+        </section>
+
+        <section class="element clerk">
+            <h2>Clerks</h2>
+            <p>Meet our efficient clerks who keep things running smoothly.</p>
+            <a href="#" class="btn">Meet Clerks</a>
+        </section>
+
+        <section class="element intern">
+            <h2>Interns</h2>
+            <p>Discover the talented interns contributing to our success.</p>
+            <a href="#" class="btn">Meet Interns</a>
+        </section>
+
+        <section class="element expense">
+            <h2>Expenses</h2>
+            <p>Track our firm's expenses and financial information.</p>
+            <a href="#" class="btn">View Expenses</a>
+        </section>
+    </div>
+</form>
+    <footer class="footer">
+        <p>&copy; 2023 Legal Firm. All rights reserved.</p>
+    </footer>
+</body>
+</html>

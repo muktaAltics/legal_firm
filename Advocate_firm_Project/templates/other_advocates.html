@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='other_advocates.css') }}">
+    <title>Legal Firm - Cases</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Legal Firm - Cases</h1>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="cases.html">Advocates</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <form action="/other_advocates" method="POST">
+    <div class="container">
+        <table class="cases-table">
+            <thead>
+                <tr>
+                    <th>Update OR Delete Advocates</th>
+                    <th>Advocate ID</th>
+                    <th>Advocate Name</th>
+                    <th>Advocate Contact</th>
+                    <th>Advocate Specialization</th>
+                    <th>Advocate Email ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for adv in advocate %}
+                <tr>
+                    <td><a href="{{ url_for('update_adv', type='update', id=adv[0]) }}">Update</a>
+                        <a href="{{ url_for('delete_adv', type='delete', id=adv[0]) }}">Delete</a>
+                    </td>
+                    <td>{{ adv[0] }}</td>
+                    <td>{{ adv[1] }}</td>
+                    <td>{{ adv[2] }}</td>
+                    <td>{{ adv[3] }}</td>
+                    <td>{{ adv[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</form>
+</div>
+    <section class="flex-parent jc-center">
+        <div><a href="{{ url_for('add_adv') }}" class="btn">Add New Advocate</a></div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 Legal Firm. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+fields for client information:
+Name
+Contact No.
+Email Id 
+Address
+Age
+Proffesion
+case no.
+current case stage
+case type
+alloted court
+next date

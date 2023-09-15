@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='add_adv.css') }}">
+    <title>Add Advocate - Legal Firm</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Add Advocate</h1>
+    </header>
+
+    <div class="container">
+        <form action="/add_adv" method="POST" class="case-form">
+            <div class="form-group">
+                <label for="name">Advocate Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Advocate Contact NO.:</label>
+                <input type="text" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="specialization">Advocate Specialization:</label>
+                <input type="text" id="specialization" name="specialization" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Advocate Email ID:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Add</button>
+                <div id="message" class="hidden">
+                    <p>Advocate Information Saved successfully.</p>
+                </div>
+
+                <script src="script.js"></script>
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2023 Legal Firm. All rights reserved.</p>
+    </footer>
+</body>
+</html>
